@@ -2,6 +2,7 @@ import * as React from 'react';
 import TopNav from "../layouts/TopNav";
 import { styled } from '@mui/system';
 import Hero from '../layouts/Hero';
+import Banner from './Banner';
 
 
 const HomePage = styled('div')({
