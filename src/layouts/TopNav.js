@@ -46,12 +46,11 @@ function TopNav() {
 
 
                     <Typography
-                        variant="h6"
+                        variant='h6'
                         noWrap
-                        component="a"
-                        href="/"
+                        component='a'
+                        href='/'
                         sx={{
-                            mr: 2,
                             // fontFamily: 'Delius Swash Caps',
                             fontFamily: 'Mali',
                             // fontWeight: 700,
@@ -68,13 +67,10 @@ function TopNav() {
                     >
 
 
-                        <Box sx={{display: 'flex', alignItems: 'center'}}>
+                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
                             <h5>
                                 Paulina
-
                             </h5>
-                            <EmojiPeople sx={{ color: '#7C7484' }} />
-
                         </Box>
 
 
@@ -118,17 +114,17 @@ function TopNav() {
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
+                            size='large'
+                            aria-label='account of current user'
+                            aria-controls='menu-appbar'
+                            aria-haspopup='true'
                             onClick={handleOpenNavMenu}
-                            color="inherit"
+                            color='inherit'
                         >
                             <MenuIcon />
                         </IconButton>
                         <Menu
-                            id="menu-appbar"
+                            id='menu-appbar'
                             anchorEl={anchorElNav}
                             anchorOrigin={{
                                 vertical: 'bottom',
@@ -147,7 +143,7 @@ function TopNav() {
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                                    <Typography textAlign='center'>{page}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -167,10 +163,10 @@ function TopNav() {
                         <Face sx={{ mt: '2px', mr: 1 }} />
 
                         <Typography
-                            variant="h5"
+                            variant='h5'
                             noWrap
-                            component="a"
-                            href=""
+                            component='a'
+                            href=''
                             sx={{
                                 mr: 2,
                                 // display: { xs: 'flex', md: 'none' },

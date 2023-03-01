@@ -60,7 +60,4 @@ export const tech = [
         name: 'npm',
         img: 'https://static-00.iconduck.com/assets.00/npm-icon-512x512-qtfdrf37.png'
     },
-
-
-
 ]
