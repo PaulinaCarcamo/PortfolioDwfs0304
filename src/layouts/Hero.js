@@ -7,7 +7,6 @@ import { Button, ImageListItem, ListItem } from '@mui/material';
 import { Container } from '@mui/system';
 import { Image } from '@mui/icons-material';
 
-
 const Hero = () => {
     return (
         <Container sx={{ my: 10 }} >
@@ -33,7 +32,7 @@ const Hero = () => {
                     </ListItem>
 
                     <ListItem sx={{ display: 'flex', gap: '1rem', my: 2 }}>
-                        <Button variant="outlined" color="success" sx={{ fontFamily: 'Blinker' }}>
+                        <Button variant="outlined" sx={{ fontFamily: 'Blinker', border: 1, color: '#009688' }}>
                             <h3>SEND ME A MESSAGE</h3>
                         </Button>
                         <Button color="secondary" sx={{ fontFamily: 'Blinker' }}>
@@ -44,8 +43,11 @@ const Hero = () => {
                 <Grid item xs={6}>
 
                     <ImageListItem>
-                        <img src='https://t3.ftcdn.net/jpg/01/70/28/92/360_F_170289223_KNx1FpHz8r5ody9XZq5kMOfNDxsZphLz.jpg'
-                            style={{ opacity: '60%', filter: 'contrast(120%)', height: '55vh' }}
+                        <img
+                            // src='https://t3.ftcdn.net/jpg/01/70/28/92/360_F_170289223_KNx1FpHz8r5ody9XZq5kMOfNDxsZphLz.jpg'
+                            src='https://images.squarespace-cdn.com/content/v1/5c94e7fed86cc97d788ffb2d/1559129534390-NQQ73MXGVRWJXHOB3G0Y/Laptop-PNG-Image-Transparent.png?format=1500w'
+                            // style={{ opacity: '60%', filter: 'contrast(120%)', height: '55vh' }}
+                            style={{ opacity: '50%', filter: 'brightness(0.5)' }}
                         ></img>
                     </ImageListItem>
 

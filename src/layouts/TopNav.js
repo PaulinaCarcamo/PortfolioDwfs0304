@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import { BubbleChart, Fac, Face, FaceeFace } from '@mui/icons-material';
+import { BubbleChart, EmojiPeople, Fac, Face, FaceeFace, Flare, KeyboardArrowLeft, KeyboardArrowRight, Verified } from '@mui/icons-material';
 
 // justifyContent: 'center',
 // justifyItems: 'center',
@@ -32,12 +32,14 @@ function TopNav() {
     };
 
     return (
-        <AppBar sx={{ position: 'static', backgroundColor: '#000', }}>
+        <AppBar sx={{ position: 'static', backgroundColor: 'transparent' }}
+        >
 
             <Box sx={{
                 display: { xs: 'none', md: 'flex' },
                 justifyContent: 'space-between',
                 mx: '20vh',
+
             }}>
 
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -50,7 +52,8 @@ function TopNav() {
                         href="/"
                         sx={{
                             mr: 2,
-                            fontFamily: 'Delius Swash Caps',
+                            // fontFamily: 'Delius Swash Caps',
+                            fontFamily: 'Mali',
                             // fontWeight: 700,
                             // letterSpacing: '.2rem',
                             fontSize: '2rem',
@@ -63,7 +66,19 @@ function TopNav() {
                             WebkitBackgroundClip: 'text',
                         }}
                     >
-                        Paulina
+
+
+                        <Box sx={{display: 'flex', alignItems: 'center'}}>
+                            <h5>
+                                Paulina
+
+                            </h5>
+                            <EmojiPeople sx={{ color: '#7C7484' }} />
+
+                        </Box>
+
+
+
                     </Typography>
 
                 </Box>
@@ -93,7 +108,7 @@ function TopNav() {
 
                 {/* <Toolbar disableGutters> */}
 
-               
+
 
                 <Container sx={{
                     display: { xs: 'flex', md: 'none' },

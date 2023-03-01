@@ -6,7 +6,8 @@ import Hero from '../layouts/Hero';
 
 const HomePage = styled('div')({
     margin: 0,
-    backgroundColor: '#000',
+    backgroundColor: '#100',
+    backgroundImage: 'linear-gradient(#000, #4B4453)',
     height: '100vh',
 });
 
