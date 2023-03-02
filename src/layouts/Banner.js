@@ -1,35 +1,23 @@
 import * as React from 'react';
-import { experimentalStyled as styled } from '@mui/material/styles';
-// import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
 import { tech } from '../data/tech';
-import { ListItem } from '@mui/material';
-
+import { Grid, ListItem } from '@mui/material';
+import styled from '@emotion/styled';
 import AOS from 'aos';
-// import 'aos/dist/aos.css';
 
 const Box = styled('div')({
-    // margin: 0,
-    backgroundColor: '#DCDCDC',
-    // backgroundImage: 'linear-gradient(#4B4453)',
-    // height: '100vh',
+    backgroundImage: 'linear-gradient(#E1E1E1, #fff)',
 });
 
 const Item = styled('div')({
-    // margin: 0,
     display: 'flex',
+    paddingTop: '3rem',
+    paddingBottom: '3rem',
     justifyContent: 'center',
-    backgroundColor: '#C6C6C6',
+    backgroundColor: '#DCDCDC',
     fontFamily: 'Blinker',
-    // fontSize: '30px',
-    paddingTop: '50px',
-    paddingBottom: '50px',
     color: '#5E5E5E',
-    letterSpacing: '.5rem'
-
-    // backgroundImage: 'linear-gradient(#4B4453)',
-    // height: '100vh',
+    letterSpacing: '.5rem',
+    // textAlign: 'center'
 });
 
 const Banner = () => {
@@ -39,40 +27,32 @@ const Banner = () => {
     }, []);
 
     return (
-        <Box
-        // sx={{ flexGrow: 1 }}
-        >
+        <Box>
             <Item>
-                <h2>These are some of the techologies I've been working with lately</h2>
+                <h2>These are some of the techologies I've been working with</h2>
             </Item>
 
-            <div data-aos="zoom-in-down">
-
-                <Grid container
-                    spacing={{ xs: 2, md: 3 }}
-                    columns={{ xs: 4, sm: 12, md: 20 }}
-                    sx={{
-                        paddingTop: 6,
-                        paddingBottom: 6
-                    }}
-                >
-
-                    {/* {Array.from(Array(6)).map((_, index) => ( */}
-                    {tech.map(item => (
-                        // <Grid item xs={2} sm={4} md={4} key={index}>
-                        <Grid item xs={2} sm={4} md={4}>
-                            <ListItem sx={{
-                                display: 'flex',
-                                justifyContent: 'center',
-                            }}>
+            <Grid container
+                spacing={{ xs: 2, md: 3 }}
+                columns={{ xs: 4, sm: 12, md: 20 }}
+                sx={{
+                    paddingTop: 6,
+                    paddingBottom: 6
+                }}
+            >
+                {tech.map(item => (
+                    <Grid item xs={2} sm={4} md={4}>
+                        <ListItem sx={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                        }}>
+                            <div data-aos="zoom-in">
                                 <img src={item.img} style={{ maxHeight: '10vh' }}></img>
-                            </ListItem>
-                        </Grid>
-                    ))}
-                    {/* ))} */}
-                </Grid>
-
-            </div>
+                            </div>
+                        </ListItem>
+                    </Grid>
+                ))}
+            </Grid>
         </Box>
     );
 }

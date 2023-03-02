@@ -4,17 +4,11 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { Container } from '@mui/system';
-import styled from '@emotion/styled';
 import AOS from 'aos';
 import { Link } from 'react-router-dom';
 
-import { linkweb } from '../data/linkweb';
-
-const Wrapper = styled('div')({
-  backgroundColor: 'white'
-})
-
-
+import { linkweb } from '../data/linkweb.js';
+import { Button } from '@mui/material';
 
 const WebCards = () => {
 
@@ -23,20 +17,20 @@ const WebCards = () => {
   }, []);
 
   return (
-    <Wrapper>
+    <Box sx={{
+      pt: { xs: 4, md: 10 },
+      pb: { xs: 0, md: 5 },
+      backgroundImage: 'linear-gradient(#fff, #E1E1E1)',
+    }}>
 
-      <Container sx={{
-        fontFamily: 'Lato',
-        fontSize: '22px',
-        my: '50px',
-        pt: '10px',
-      }}>
-        <h1>RECENT PROJECTS  </h1>
+      <Container
+        sx={{ fontFamily: 'Lato', fontSize: { xs: '1.2rem', md: '2rem' } }}
+      >
+        <h2>RECENT PROJECTS  </h2>
       </Container>
 
-
       {linkweb.map((item) => (
-        <Container sx={{ py: 5 }}>
+        <Container sx={{ py: { xs: 2, md: 5 } }}>
           <div data-aos="fade-down">
 
             <Paper
@@ -47,28 +41,59 @@ const WebCards = () => {
                 backgroundImage: `url(${item.img})`,
               }}
             >
-              {/* {<img style={{ display: 'none' }}
-          // src={post.image} alt={post.imageText} 
-          />} */}
-              <Grid container >
-                <Grid item md={6}  >
+              <Grid container>
+                <Grid item md={6}>
+
                   <Box
                     sx={{
                       p: { xs: 3, md: 6 },
-                      pr: { md: 0 },
-
-                      minHeight: '40vh',
+                      minHeight: { xs: '25vh', md: '40vh' },
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'space-between'
                     }}
                   >
-                    <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                      {item.title}
-                    </Typography>
-                    <Typography variant="h5" color="inherit" paragraph>
-                      {item.desc}
-                    </Typography>
-                    <Link to={item.url}>
-                      VISIT SITE
-                    </Link>
+
+                    <Box>
+                      <Typography color="inherit" gutterBottom
+                        sx={{
+                          fontSize: { xs: '1.5rem', md: '2.5rem' }
+                        }}
+                      >
+                        {item.title}
+                      </Typography>
+
+                      <Typography color="inherit" paragraph>
+                        {item.desc}
+                      </Typography>
+                    </Box>
+
+                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: '.8rem' }}>
+                      <Typography>
+                        <Link to={item.url} style={{
+                          textDecoration: 'none',
+                          color: '#fff',
+                          fontFamily: 'Lato',
+                          fontWeight: 600
+                        }}
+                        >
+                          VISIT SITE
+                        </Link>
+                      </Typography>
+
+                      <Typography>
+                        <Link to={item.repo} style={{
+                          textDecoration: 'none',
+                          color: '#fff',
+                          fontFamily: 'Lato',
+                          fontWeight: 600
+                        }}
+                        >
+                          GO TO REPO
+                        </Link>
+                      </Typography>
+                    </Box>
+
                   </Box>
                 </Grid>
               </Grid>
@@ -76,7 +101,7 @@ const WebCards = () => {
           </div>
         </Container>
       ))}
-    </Wrapper>
+    </Box>
   );
 }
 

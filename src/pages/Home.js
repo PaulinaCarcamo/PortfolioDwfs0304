@@ -23,21 +23,21 @@ const Home = () => {
 
         <HomePage>
 
-            <Box sx={{height: '100vh'}}>
-            <TopNav />
-            <Hero />
+            <Box sx={{ height: { xs: '100%', md: '100vh' } }}>
+                <TopNav />
+                <Hero />
             </Box>
 
             <Banner />
             <ProfileList />
             {/* <Badges/> */}
-            <Others/>
-            <WebCards/>
+            <Others />
+            <WebCards />
 
 
-            <SubHeading/>
-            <Footer/>
-  
+            <SubHeading />
+            <Footer />
+
         </HomePage>
     )
 };

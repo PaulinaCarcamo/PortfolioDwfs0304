@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
 import { Check } from '@mui/icons-material';
 import { footer } from '../data/footer.js'
+import { Grid } from '@mui/material';
+
+import AOS from 'aos';
 
 const Box = styled('div')({
     backgroundImage: 'linear-gradient(#4B4453, #000)',
-    // backgroundColor: '#070707'
 })
 
 const ItemBox = styled('div')({
@@ -15,35 +16,46 @@ const ItemBox = styled('div')({
     alignContent: 'right',
     alignItems: 'right',
     justifyItems: 'right',
-    gap: '20px',
+    gap: '1rem',
     color: '#fff'
 })
 
 const Item = styled('div')({
     fontFamily: 'Lato',
     fontSize: '22px',
+    color: '#fff',
+    marginBottom: '2rem'
 })
 
 const Footer = () => {
+
+    React.useEffect(() => {
+        AOS.init({ duration: 2000 });
+    }, []);
+
     return (
         <Box
-            // sx={{ width: '100%' }}
-            sx={{ padding: 15 }}
+            sx={{
+                px: { xs: 0, md: 16 },
+                pt: { xs: 0, md: 16 },
+                pb: { xs: 4, md: 20 }
+            }}
         >
-
-            <Item sx={{ my: 5, color: '#fff' }}>
-                <h1>FOR FURTHER INFORMATION  </h1>
-                <h1>SEND ME A MESSAGE</h1>
+            <Item>
+                <h2>FOR FURTHER INFORMATION  </h2>
+                <h2>SEND ME A MESSAGE</h2>
             </Item>
 
-            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            <Grid container rowSpacing={1}
+                columnSpacing={{ xs: 1, sm: 2, md: 3 }}
                 columns={{ xs: 4, sm: 6, md: 12 }}
             >
-
                 {footer.map((item) =>
                     <Grid item xs={4} md={4} >
                         <ItemBox>
-                            <Check color='secondary' />
+                            <div data-aos="flip-left">
+                                <Check color='secondary' />
+                            </div>
                             <Item>{item.desc}
                             </Item>
                         </ItemBox>
