@@ -8,6 +8,10 @@ import { Container } from '@mui/system';
 import { Image } from '@mui/icons-material';
 import AOS from 'aos';
 
+const Wrapper = styled('div')({
+    backgroundImage: 'linear-gradient(#000, #4B4453)',
+})
+
 const Hero = () => {
 
     React.useEffect(() => {
@@ -16,9 +20,10 @@ const Hero = () => {
 
     return (
 
+<Wrapper>
 
-        
-        <Container sx={{ my: 10, height: '100vh' }} >
+
+        <Container sx={{ py: 10, height: '100vh' }} >
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
             >
                 <Grid item xs={6} sx={{
@@ -69,6 +74,9 @@ const Hero = () => {
                 </Grid>
             </Grid>
         </Container>
+
+        </Wrapper>
+        
     )
 };
 
