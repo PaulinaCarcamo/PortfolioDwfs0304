@@ -1,4 +1,4 @@
-export const learn = [
+export const logos = [
     {
         img: 'https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png'
     },

@@ -5,6 +5,9 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import styled from '@emotion/styled';
 
+import { HashLink } from 'react-router-hash-link';
+
+
 // justifyContent: 'center',
 // justifyItems: 'center',
 // alignContent: 'center',
@@ -45,14 +48,17 @@ const TopNav = () => {
                     display: { xs: 'flex', md: 'flex' }
                 }}>
                     {pages.map((page) => (
-                        <Button
-                            key={page}
-                            sx={{
-                                my: 2, color: 'white', display: 'block',
-                                fontFamily: 'Blinker', fontSize: '1.2rem',
-                            }}>
-                            <h5>{page}</h5>
-                        </Button>
+                     
+                        <HashLink smooth to="/#profile">
+                            <Button
+                                key={page}
+                                sx={{
+                                    my: 2, color: 'white', display: 'block',
+                                    fontFamily: 'Blinker', fontSize: '1.2rem',
+                                }}>
+                                <h5>{page}</h5>
+                            </Button>
+                        </HashLink>
                     ))}
                 </Box>
             </Container>

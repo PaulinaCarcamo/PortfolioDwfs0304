@@ -1,4 +1,4 @@
-export const tech = [
+export const logos = [
     {
         name: 'mongodb',
         img: 'https://i.postimg.cc/vZ1J2phB/mongodblogopng.png'
@@ -44,7 +44,7 @@ export const tech = [
         img: 'https://i.postimg.cc/3xf6v3gx/reactbtsrapplogo.png'
 
     },
-        {
+    {
         name: 'vercel',
         img: 'https://pipedream.com/s.v0/app_XaLh2x/logo/orig'
     },

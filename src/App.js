@@ -1,16 +1,15 @@
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './assets/fonts.css'
 import 'aos/dist/aos.css';
-
-// import Banner from './layouts/Banner';
-import Home from './pages/Home';
-import { BrowserRouter } from 'react-router-dom';
+import Home from './pages/Home.js';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Home/>
+        <Routes>
+          <Route index element={<Home />} />
+        </Routes>
       </BrowserRouter>
     </div>
   );

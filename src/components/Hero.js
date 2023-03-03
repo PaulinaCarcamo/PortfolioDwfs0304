@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 
 import { contact } from '../data/contact.js';
-import { images } from '../data/images.js'
+import { images } from '../data/siteimages.js'
 
 const Wrapper = styled('div')({
     backgroundImage: 'linear-gradient(#000, #4B4453)',
@@ -90,7 +90,7 @@ const Hero = () => {
                 </Grid>
             </Container>
         </Wrapper>
-    )
-};
+    );
+}
 
 export default Hero;

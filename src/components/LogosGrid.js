@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { tech } from '../data/tech';
 import { Grid, ListItem } from '@mui/material';
 import styled from '@emotion/styled';
 import AOS from 'aos';
+import { logos } from '../data/techlogos';
 
 const Box = styled('div')({
     backgroundImage: 'linear-gradient(#E1E1E1, #fff)',
@@ -20,7 +20,7 @@ const Item = styled('div')({
     // textAlign: 'center'
 });
 
-const Banner = () => {
+const LogosGrid = () => {
 
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
@@ -40,7 +40,7 @@ const Banner = () => {
                     paddingBottom: 6
                 }}
             >
-                {tech.map(item => (
+                {logos.map(item => (
                     <Grid item xs={2} sm={4} md={4}>
                         <ListItem sx={{
                             display: 'flex',
@@ -57,4 +57,4 @@ const Banner = () => {
     );
 }
 
-export default Banner;
+export default LogosGrid;

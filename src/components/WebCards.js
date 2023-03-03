@@ -7,7 +7,7 @@ import { Container } from '@mui/system';
 import AOS from 'aos';
 import { Link } from 'react-router-dom';
 
-import { linkweb } from '../data/linkweb.js';
+import { linkweb } from '../data/weblinks.js';
 import { Button } from '@mui/material';
 
 const WebCards = () => {

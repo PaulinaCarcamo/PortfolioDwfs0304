@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
-import { others } from '../data/others';
-
-// import { badges } from '../data/badges';
+import { icons } from '../data/iconsimg';
 
 const Box = styled('div')({
     // backgroundImage: 'linear-gradient(#DCDCDC, #EDEDED)',
@@ -25,7 +23,7 @@ const Item = styled('div')({
 
 })
 
-const Others = () => {
+const IconsList = () => {
     return (
         <div>
             <Box>
@@ -36,7 +34,7 @@ const Others = () => {
                     spacing={{ xs: 1, md: 2 }}
                     columns={{ xs: 6, sm: 12, md: 20 }}
                 >
-                    {others.map((item) =>
+                    {icons.map((item) =>
                         <Grid item xs={2} sm={4} md={4} >
                             <Item sx={{py: {xs: 2, md: 5}}}>
                                 <img src={item.img} style={{ maxHeight: '4vh' }}></img>
@@ -47,7 +45,7 @@ const Others = () => {
                 </Grid>
             </Box>
         </div>
-    )
-};
+    );
+}
 
-export default Others;
+export default IconsList;

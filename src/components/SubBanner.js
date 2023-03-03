@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 
-import { learn } from '../data/learn';
+import { logos } from '../data/sublogos';
 
 const Box = styled('div')({
     backgroundImage: 'linear-gradient(#DCDCDC, #C6C6C6 )'
@@ -19,13 +19,9 @@ const Item = styled('div')({
     fontFamily: 'Blinker',
     color: '#5E5E5E',
     letterSpacing: '.5rem',
-
-
-
-
 })
 
-const SubHeading = () => {
+const SubBanner = () => {
     return (
         <div>
             <Box>
@@ -38,7 +34,7 @@ const SubHeading = () => {
                     spacing={{ xs: 2, md: 3 }}
                     columns={{ xs: 4, sm: 12, md: 20 }}
                 >
-                    {learn.map((item) =>
+                    {logos.map((item) =>
                         <Grid item xs={2} sm={4} md={4} >
                             <Item>
                                 <img src={item.img} style={{ maxHeight: '6vh' }}></img>
@@ -48,7 +44,7 @@ const SubHeading = () => {
                 </Grid>
             </Box>
         </div>
-    )
-};
+    );
+}
 
-export default SubHeading;
+export default SubBanner;

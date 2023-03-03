@@ -4,7 +4,7 @@ import { Check } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
 import AOS from 'aos';
 
-import { exp } from '../data/exp.js';
+import { paragraph } from '../data/paragraph.js';
 
 const Box = styled('div')({
     backgroundColor: '#fff'
@@ -23,7 +23,7 @@ const Item = styled('div')({
     fontFamily: 'Lato',
 });
 
-const ProfileList = () => {
+const TextGrid = () => {
 
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
@@ -46,7 +46,7 @@ const ProfileList = () => {
                 columns={{ xs: 4, sm: 6, md: 12 }}
                 sx={{ pt: { xs: 2, md: 6 } }}
             >
-                {exp.map((item) =>
+                {paragraph.map((item) =>
                     <Grid item xs={6}  >
                         <List>
                             <div data-aos="flip-left">
@@ -66,4 +66,4 @@ const ProfileList = () => {
     );
 }
 
-export default ProfileList;
+export default TextGrid;
