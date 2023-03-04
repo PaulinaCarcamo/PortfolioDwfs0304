@@ -92,7 +92,7 @@ const Badges = () => {
                     <Grid item xs={4} md={4} >
                         <ItemBox>
                             <div data-aos="zoom-in-up">
-                                <img src={item.img} style={{ maxHeight: '8vh' }}></img>
+                                <img src={item.img} style={{ maxHeight: '8vh' }} alt="img"></img>
                             </div>
                             <Item sx={{ fontSize: { xs: '.8rem', md: '1.2rem' } }}>
                                 <p>{item.desc}</p>

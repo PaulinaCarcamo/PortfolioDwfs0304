@@ -45,7 +45,7 @@ const LogosGrid = () => {
                                 justifyContent: 'center',
                             }}>
                                 <div data-aos="zoom-in">
-                                    <img src={item.img} style={{ maxHeight: '10vh' }}></img>
+                                    <img src={item.img} style={{ maxHeight: '10vh' }} alt="img"></img>
                                 </div>
                             </ListItem>
                         </Grid>

@@ -38,7 +38,7 @@ const SubBanner = () => {
                         <Grid item xs={2} sm={2} md={4}
                         >
                             <Item>
-                                <img src={item.img} style={{ maxHeight: '6vh' }}></img>
+                                <img src={item.img} style={{ maxHeight: '6vh' }} alt="img"></img>
                             </Item>
                         </Grid>
                     )}

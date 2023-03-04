@@ -29,7 +29,7 @@ const IconsList = () => {
                     {icons.map((item) =>
                         <Grid item xs={2} sm={4} md={4} >
                             <Item sx={{ py: { xs: 2, md: 5 } }}>
-                                <img src={item.img} style={{ maxHeight: '4vh' }}></img>
+                                <img src={item.img} style={{ maxHeight: '4vh' }} alt="img"></img>
                             </Item>
                         </Grid>
                     )}

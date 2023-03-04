@@ -93,7 +93,8 @@ const Hero = () => {
                                 <ImageListItem sx={{ display: { xs: 'none', md: 'flex' } }}>
                                     <img
                                         src={item.img}
-                                        style={{ opacity: '50%', filter: 'brightness(0.5)' }}>
+                                        style={{ opacity: '50%', filter: 'brightness(0.5)' }}
+                                        alt="img">        
                                     </img>
                                 </ImageListItem>
                             ))}
