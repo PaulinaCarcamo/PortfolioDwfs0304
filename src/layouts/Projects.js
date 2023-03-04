@@ -4,7 +4,9 @@ import WebCards from '../components/WebCards.js';
 const Projects = () => {
     return (
         <React.Fragment>
-            <WebCards />
+            <div id="projects">
+                <WebCards />
+            </div>
         </React.Fragment>
     );
 }

@@ -10,7 +10,8 @@ import { badges } from '../data/badges.js'
 
 const Box = styled('div')({
     backgroundImage: 'linear-gradient(#4B4453, #000)',
-})
+    fontFamily: 'Blinker',
+});
 
 const ItemBox = styled('div')({
     display: 'flex',
@@ -20,21 +21,20 @@ const ItemBox = styled('div')({
     justifyItems: 'right',
     gap: '1rem',
     color: '#fff'
-})
+});
 
 const Item = styled('div')({
-    fontFamily: 'Lato',
     fontSize: '1.5rem',
     color: '#B0B0B0',
     marginBottom: '2rem',
     letterSpacing: '.1rem'
-})
+});
 
 const BtnItem = styled('div')({
     display: 'flex',
     gap: '.5rem',
     fontFamily: 'Blinker',
-})
+});
 
 const Badges = () => {
 
@@ -45,17 +45,15 @@ const Badges = () => {
     return (
         <Box
             sx={{
-                px: { xs: 0, md: 16 },
-                pt: { xs: 0, md: 16 },
-                pb: { xs: 4, md: 20 }
+                px: { xs: 1, md: 16 },
+                pt: { xs: 4, md: 16 },
+                pb: { xs: 8, sm: 12, md: 20 }
             }}
         >
-            <Item>
-                <h2>CONNECT WITH ME</h2>
-            </Item>
+            <Item><h2>CONNECT WITH ME</h2></Item>
 
             {contact.map((item) => (
-                <ListItem sx={{ display: { xs: 'block', md: 'flex' }, gap: '1rem', my: 2 }}>
+                <ListItem sx={{ display: { xs: 'block', md: 'flex' }, gap: '1rem', my: 4 }}>
 
                     <Link to={(`https://wa.me/${item.numb}?text=${item.msg}`)}
                         style={{ textDecoration: 'none' }}
@@ -71,7 +69,12 @@ const Badges = () => {
                     <Link to={(`mailto:${item.mail}?subject=${item.msg}&body=${item.desc}`)}
                         style={{ textDecoration: 'none' }}
                     >
-                        <Button variant='outlined' sx={{ border: '1px solid #9D88B2', color: '#9D88B2' }}>
+                        <Button variant='outlined' sx={{
+                            border: '1px solid #9D88B2',
+                            color: '#9D88B2',
+                            mt: { xs: 1, sm: 0, md: 0 },
+                            mx: { xs: 0, sm: 2, md: 0 }
+                        }}>
                             <BtnItem>
                                 <MailOutline />
                                 <h4>SEND ME AN EMAIL</h4>
@@ -79,7 +82,6 @@ const Badges = () => {
                         </Button>
                     </Link>
                 </ListItem>
-
             ))}
 
             <Grid container rowSpacing={1}
@@ -90,13 +92,10 @@ const Badges = () => {
                     <Grid item xs={4} md={4} >
                         <ItemBox>
                             <div data-aos="zoom-in-up">
-                                {/* <Check color='secondary' /> */}
                                 <img src={item.img} style={{ maxHeight: '8vh' }}></img>
                             </div>
-                            <Item>
-                                <h5>
-                                    {item.desc}
-                                </h5>
+                            <Item sx={{ fontSize: { xs: '.8rem', md: '1.2rem' } }}>
+                                <p>{item.desc}</p>
                             </Item>
                         </ItemBox>
                     </Grid>

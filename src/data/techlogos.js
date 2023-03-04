@@ -33,7 +33,7 @@ export const logos = [
     },
     {
         name: 'github',
-        img: 'https://cdn-icons-png.flaticon.com/512/25/25231.png'
+        img: 'https://i.postimg.cc/WzjQmzY3/25231.png'
     },
     {
         name: 'materialui',
@@ -46,7 +46,7 @@ export const logos = [
     },
     {
         name: 'vercel',
-        img: 'https://pipedream.com/s.v0/app_XaLh2x/logo/orig'
+        img: 'https://i.postimg.cc/BbgRm3RC/orig.png'
     },
     {
         name: 'netlify',
@@ -54,10 +54,10 @@ export const logos = [
     },
     {
         name: 'firebase',
-        img: 'https://cdn.icon-icons.com/icons2/691/PNG/512/google_firebase_icon-icons.com_61474.png'
+        img: 'https://i.postimg.cc/9XY3mPzq/google-firebase-icon-icons-com-61474.png'
     },
     {
         name: 'npm',
-        img: 'https://static-00.iconduck.com/assets.00/npm-icon-512x512-qtfdrf37.png'
+        img: 'https://i.postimg.cc/02kTb6JX/npm-icon-512x512-qtfdrf37.png'
     },
 ]

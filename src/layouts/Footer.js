@@ -7,7 +7,9 @@ const Footer = () => {
     return (
         <React.Fragment>
             <SubBanner />
-            <Badges />
+            <div id="connect">
+                <Badges />
+            </div>
         </React.Fragment>
     );
 }

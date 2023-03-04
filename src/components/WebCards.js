@@ -8,7 +8,6 @@ import AOS from 'aos';
 import { Link } from 'react-router-dom';
 
 import { linkweb } from '../data/weblinks.js';
-import { Button } from '@mui/material';
 
 const WebCards = () => {
 
@@ -21,12 +20,13 @@ const WebCards = () => {
       pt: { xs: 4, md: 10 },
       pb: { xs: 0, md: 5 },
       backgroundImage: 'linear-gradient(#fff, #E1E1E1)',
+      fontFamily: 'Blinker'
     }}>
 
       <Container
-        sx={{ fontFamily: 'Lato', fontSize: { xs: '1.2rem', md: '2rem' } }}
+        sx={{ fontSize: { xs: '1.2rem', md: '2rem' }, color: '#575757' }}
       >
-        <h2>RECENT PROJECTS  </h2>
+        <h2>RECENT PROJECTS</h2>
       </Container>
 
       {linkweb.map((item) => (
@@ -51,19 +51,21 @@ const WebCards = () => {
                       display: 'flex',
                       flexDirection: 'column',
                       justifyContent: 'space-between'
+
                     }}
                   >
 
                     <Box>
                       <Typography color="inherit" gutterBottom
                         sx={{
-                          fontSize: { xs: '1.5rem', md: '2.5rem' }
+                          fontSize: { xs: '1.5rem', md: '2.5rem' },
+                          fontFamily: 'Blinker'
                         }}
                       >
                         {item.title}
                       </Typography>
 
-                      <Typography color="inherit" paragraph>
+                      <Typography color="inherit" paragraph sx={{ fontFamily: 'Blinker' }}>
                         {item.desc}
                       </Typography>
                     </Box>
@@ -73,11 +75,11 @@ const WebCards = () => {
                         <Link to={item.url} style={{
                           textDecoration: 'none',
                           color: '#fff',
-                          fontFamily: 'Lato',
+                          fontFamily: 'Blinker',
                           fontWeight: 600
                         }}
                         >
-                          VISIT SITE
+                          WEBSITE
                         </Link>
                       </Typography>
 
@@ -85,11 +87,11 @@ const WebCards = () => {
                         <Link to={item.repo} style={{
                           textDecoration: 'none',
                           color: '#fff',
-                          fontFamily: 'Lato',
+                          fontFamily: 'Blinker',
                           fontWeight: 600
                         }}
                         >
-                          GO TO REPO
+                          REPOSITORY
                         </Link>
                       </Typography>
                     </Box>

@@ -3,36 +3,36 @@ export const linkweb = [
         title: 'Ecommerce',
         desc: 'Making payments with Paypal',
         url: 'https://testing-phi-brown.vercel.app/',
-        img: 'https://wallpaperaccess.com/full/2593168.png',
+        img: 'https://i.postimg.cc/MZvs9J8K/minimalist-code-wallpaper-pink.png',
         repo: 'https://github.com/PaulinaCarcamo/ECommerceBack04012023'
     },
 
     {
         title: 'Restaurant App',
         desc: 'Connecting contact forms to firebase',
-        url: 'https://moonlit-bublanina-b7b196.netlify.app/',
-        img: 'https://wallpaperaccess.com/full/3971458.png',
-        repo: 'https://github.com/PaulinaCarcamo/RestaurantApp02012023'
+        url: 'https://famous-vacherin-56ae21.netlify.app/',
+        img: 'https://i.postimg.cc/w3YM8Qrx/minimalist-code-wallpaper-brownish.png',
+        repo: 'https://github.com/darioavila2022/react-restaurant-app'
     },
     {
         title: 'Dashboard',
         desc: 'Data display from rest Api',
-        url: 'https://classy-sprite-62be8d.netlify.app/',
-        img: 'https://images.pling.com/img/00/00/33/91/33/1327149/2fc1fb067ccdd4f2edf40af974c970dee204.png',
-        repo: 'https://github.com/PaulinaCarcamo/Dashboard03012023'
+        url: 'https://stately-yeot-10e5cc.netlify.app/',
+        img: 'https://i.postimg.cc/jSrwGRV6/minimalist-code-wallpaper-green.jpg',
+        repo: 'https://github.com/PaulinaCarcamo/dashboardProject3'
     },
     {
         title: 'Landing Page',
         desc: 'Working with styling features',
-        url: 'https://paulinacarcamo.github.io/LandingPage01012023/',
-        img: 'https://wallpaperaccess.com/full/1798887.png',
-        repo: 'https://github.com/PaulinaCarcamo/LandingPage01012023'
+        url: 'https://paulinacarcamo.github.io/17082022Landing/',
+        img: 'https://i.postimg.cc/zGSbN45s/minimalist-code-wallpaper-purple.jpg',
+        repo: 'https://github.com/PaulinaCarcamo/17082022Landing'
     },
     {
         title: 'CRUD App',
         desc: 'Saving data in local storage',
         url: 'https://paulinacarcamo.github.io/150922CRUDJS/',
-        img: 'https://wallpaperaccess.com/full/3893295.png',
+        img: 'https://free4kwallpapers.com/uploads/originals/2021/04/13/minimalist-code-wallpaper.png',
         repo: 'https://github.com/PaulinaCarcamo/150922CRUDJS'
     },
 

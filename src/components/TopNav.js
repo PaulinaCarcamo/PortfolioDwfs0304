@@ -4,16 +4,9 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import styled from '@emotion/styled';
+import { Link } from 'react-scroll';
 
-import { HashLink } from 'react-router-hash-link';
-
-
-// justifyContent: 'center',
-// justifyItems: 'center',
-// alignContent: 'center',
-// alignItems: 'center',
-
-const pages = ['Profile', 'Projects', 'Connect'];
+import { navlinks } from '../data/navlinks.js';
 
 const Wrapper = styled('div')({
     backgroundColor: '#000',
@@ -29,9 +22,9 @@ const TopNav = () => {
             }}>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                     <Typography
-                        href='/'
                         sx={{
-                            marginLeft: { xs: 1, md: 2 },
+                            mt: { xs: 2, md: 0 },
+                            mx: { xs: 1, md: 2 },
                             fontFamily: 'Mali',
                             color: 'inherit',
                             textDecoration: 'none',
@@ -39,28 +32,31 @@ const TopNav = () => {
                             backgroundSize: '100%',
                             WebkitTextFillColor: 'transparent',
                             WebkitBackgroundClip: 'text',
-                        }}>
-                        <h2>Paulina</h2>
+                        }}
+                    >
+                        <h2>Paulina Cárcamo</h2>
                     </Typography>
                 </Box>
 
                 <Box sx={{
                     display: { xs: 'flex', md: 'flex' }
                 }}>
-                    {pages.map((page) => (
-                     
-                        <HashLink smooth to="/#profile">
+                    {navlinks.map((item) => (
+
+                        <Link to={item.id} spy={true} smooth={true} offset={50} duration={800}>
                             <Button
-                                key={page}
+                                key={item.id}
                                 sx={{
                                     my: 2, color: 'white', display: 'block',
                                     fontFamily: 'Blinker', fontSize: '1.2rem',
-                                }}>
-                                <h5>{page}</h5>
+                                }}
+                            >
+                                <h5>{item.title}</h5>
                             </Button>
-                        </HashLink>
+                        </Link>
                     ))}
                 </Box>
+
             </Container>
         </Wrapper>
     );
