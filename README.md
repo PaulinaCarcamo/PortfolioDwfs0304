@@ -36,6 +36,6 @@ This project was created through production build
 
 ![App Design](https://i.postimg.cc/qq9SMdzs/Untitled-1.png)
 
-## Authors
+## Author
 
 - [@paulinacarcamo](https://github.com/PaulinaCarcamo)
