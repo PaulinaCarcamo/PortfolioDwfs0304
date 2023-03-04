@@ -6,7 +6,7 @@ import Hero from '../components/Hero.js';
 const Header = () => {
     return (
         <React.Fragment>
-            <Box sx={{ height: { xs: '100%', md: '100vh' } }}>
+            <Box sx={{ minHeight: {xs: 0, md: '100vh'} }}>
                 <TopNav />
                 <Hero />
             </Box>

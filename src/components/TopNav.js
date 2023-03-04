@@ -18,7 +18,6 @@ const TopNav = () => {
             <Container sx={{
                 display: { xs: 'block', md: 'flex' },
                 justifyContent: 'space-between',
-                height: { xs: '5vh', md: '10vh' }
             }}>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                     <Typography

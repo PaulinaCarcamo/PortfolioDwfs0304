@@ -26,7 +26,10 @@ const Hero = () => {
 
     return (
         <Wrapper>
-            <Container sx={{ py: 10, height: { md: '100vh' } }} >
+            <Container sx={{
+                pt: { xs: 0, sm: 10, md: 10 },
+                minHeight: { md: '100vh' }
+            }}>
                 <Grid container
                     rowSpacing={1}
                     columnSpacing={{ xs: 1, sm: 2, md: 3 }}
@@ -94,7 +97,7 @@ const Hero = () => {
                                     <img
                                         src={item.img}
                                         style={{ opacity: '50%', filter: 'brightness(0.5)' }}
-                                        alt="img">        
+                                        alt="img">
                                     </img>
                                 </ImageListItem>
                             ))}
