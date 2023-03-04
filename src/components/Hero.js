@@ -11,7 +11,7 @@ import { images } from '../data/siteimages.js'
 
 const Wrapper = styled('div')({
     backgroundImage: 'linear-gradient(#000, #4B4453)',
-    fontFamily: 'Blinker'
+    fontFamily: 'Blinker',
 })
 
 const BtnItem = styled('div')({

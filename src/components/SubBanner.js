@@ -27,7 +27,7 @@ const SubBanner = () => {
             <Box>
 
                 <Item sx={{ backgroundColor: '#DCDCDC', height: { xs: '10vh', md: '2vh' }, fontSize: { xs: '.7rem', md: '1rem' }, px: { xs: 2, md: 0 } }}>
-                    <h2>These are some of the technologies I've included in my road map</h2>
+                    <h2>These are some of the technologies I'm interested in learning about</h2>
                 </Item>
 
                 <Grid container
